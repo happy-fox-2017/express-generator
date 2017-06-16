@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Create Task</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Add new task</h1>
+    <form method="post">
+      <input type="text" name="task" placeholder="Task">
+      <select name="email" placeholder="Select your account">
+              <% users.forEach(user => { %>
+                <option value="<%- user.email %>"><%- user.email %></option>
+              <% }) %>
+            </select>
+      <button type="submit" name="button">Add Task</button>
+    </form>
+  </div>
+</body>
+
+</html>
